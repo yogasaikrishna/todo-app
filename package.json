@@ -1,0 +1,12 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "Simple TODO list app using Node.js, Express and MySQL",
+  "author": "Yogasaikrishna",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mysql": "^2.9.0"
+  }
+}

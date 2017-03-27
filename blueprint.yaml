@@ -17,16 +17,17 @@ services:
       CREATE TABLE todo_list (
         id INT NOT NULL AUTO_INCREMENT,
         title VARCHAR(30) NOT NULL,
+        status VARCHAR(30) NOT NULL,
         completed boolean NOT NULL default 0,
         PRIMARY KEY (ID)
       );
 
-      INSERT INTO todo_list values (default, 'justin', 0);
+      INSERT INTO todo_list values (default, 'Isaac Asimov', "", 0);
 
 - type: org.apache.brooklyn.entity.webapp.nodejs.NodeJsWebAppService
   id: nodejs
   brooklyn.config:
     gitRepoUrl:
-      "https://github.com/yogasaikrishna/todo-app.git"
+      "https://github.com/justinThompson/todo-app.git"
     appFileName: app.js
     appName: todo-list-app

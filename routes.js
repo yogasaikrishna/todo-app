@@ -14,7 +14,7 @@ module.exports = {
       todo.create(req.body, res);
     });
 
-    app.put('/api/todos/', function(req, res) {
+    app.put('/api/todos/:id', function(req, res) {
       todo.update(req.body, res);
     });
 

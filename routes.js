@@ -2,19 +2,23 @@ var todo = require('./models/todo');
 
 module.exports = {
   configure: function(app) {
-    app.get('/todo/', function(req, res) {
+   app.get('/api', function(req, res) {
+      res.status(200).send('ok');
+    });
+
+    app.get('/api/todos/', function(req, res) {
       todo.get(res);
     });
 
-    app.post('/todo/', function(req, res) {
+    app.post('/api/todos/', function(req, res) {
       todo.create(req.body, res);
     });
 
-    app.put('/todo/', function(req, res) {
+    app.put('/api/todos/', function(req, res) {
       todo.update(req.body, res);
     });
 
-    app.delete('/todo/:id/', function(req, res) {
+    app.delete('/api/todos/:id/', function(req, res) {
       todo.delete(req.params.id, res);
     });
   }
